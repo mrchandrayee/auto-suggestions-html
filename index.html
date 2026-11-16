@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1221">
+  <title>Auto Suggestions HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <h1>Auto Suggestions HTML</h1>
+
+    <section class="search-demo" aria-label="Technology autocomplete demo">
+      <div class="box">
+        <label class="sr-only" for="technology-search">Search technologies</label>
+        <input id="technology-search" class="search" type="text"
+          placeholder="Search technologies..." autocomplete="off"
+          aria-autocomplete="list" aria-controls="suggestion-list"
+          aria-expanded="false">
+        <ul id="suggestion-list" class="suggestion-list" role="listbox" hidden></ul>
+      </div>
+    </section>
+
+    <div class="code-caption">Comment "Auto Suggest" for code</div>
+    <section class="code-panel" aria-label="CSS source code">
+      <pre><code>.box {
+    width: 500px; position: relative
+}
+.search {
+    width: 100%; padding: 14px;
+    border-radius: 10px; border: 0
+}
+#list {
+    position: absolute; top: 52px;
+    left: 0; right: 0; background: #fff;
+    border-radius: 10px; max-height: 250px;
+    overflow: auto; display: none
+}
+.item {
+    padding: 10px; cursor: pointer
+}
+.item.active, .item:hover {
+    background: #2563eb; color: #fff
+}</code></pre>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
